@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+h1, h2, h3, h4 {
+    color: #333;
+}
+
+.info, .tpv-fields, .resumo {
+    margin-bottom: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.tpv-fields {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-fields, .right-fields {
+    width: 48%;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#result {
+    font-size: 18px;
+    color: #333;
+    margin-top: 20px;
+}
+
+.resumo {
+    background-color: #f9f9f9;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    width: 97%;
+}
+
+.quadrante {
+    margin-bottom: 20px;
+}
+
+.quadrante p {
+    font-size: 14px;
+    margin: 5px 0;
+}
