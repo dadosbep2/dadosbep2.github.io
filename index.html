@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Vendas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Vendas</h1>
+    	<div class="imagem-container">
+        	<img src="https://raw.githubusercontent.com/dadosbep2/dadosbep2.github.io/refs/heads/main/LOGO%20BEP.png" alt="Logo da BEP" class="imagem-canto">
+        	<p class="exclusivo-mensagem"><strong>Sistema Exclusivo da BEP.</strong> <br> Para uso interno e restrito, sendo proibido a distribuição ou cópia sem autorização.</p>
+    	</div>
+        <!-- Quadro de Resumo movido para cima -->
+        <div class="resumo">
+            <h3>Legenda</h3>
+            <!-- Quadrante Prod -->
+            <div class="quadrante">
+                <h4>Prod</h4>
+                <p>Abaixo de 0,4: R$ 0</p>
+                <p>0,4 - 0,49: R$ 300</p>
+                <p>0,5 - 0,59: R$ 450</p>
+                <p>0,6 - 0,69: R$ 900</p>
+            </div>
+            <!-- Quadrante TPV -->
+            <div class="quadrante">
+                <h4>TPV M1 (Premiação)</h4>
+		<label for="aviso">Premiação destravada a partir de 0,4 na prod</label>
+
+                <p> 0-4K: 	R$ 0</p>
+                <p> 4K-5K: 	R$ 5</p>
+                <p> 5K-8K: 	R$ 15</p>
+                <p> 8K-11K: 	R$ 25</p>
+                <p> 11K-15K: 	R$ 30</p>
+                <p> 15K+: 	R$ 50</p>
+            </div>
+        </div>
+
+        <!-- Informações de salário fixo e ajuda de custo -->
+                <div class="form-section">
+            <div>
+                <p><strong>Salário Fixo:</strong> R$ 2.783,12</p>
+                <p><strong>Ajuda de Custo:</strong> R$ 1.200,00</p>
+
+                <form id="sales-form">
+		    <h2>PROD</h2>
+                    <input type="number" id="prod" name="prod" step="0.1" min="0" max="1" placeholder="Digite a produção">
+
+                    <h2>TPV M1 (Premiação)</h2>
+            	    <div class="tpv-fields">
+                	<div class="left-fields">
+                    		<label for="campo1">0-4K:</label>
+                    		<input type="number" id="campo1" name="campo1" min="0">
+
+                    		<label for="campo3">5K-8K:</label>
+                    		<input type="number" id="campo3" name="campo3" min="0">
+
+                    		<label for="campo5">11K-15K:</label>
+                    		<input type="number" id="campo5" name="campo5" min="0">
+                	</div>
+
+                    	<div class="right-fields">
+                    		<label for="campo2">4K-5K:</label>
+                    		<input type="number" id="campo2" name="campo2" min="0">
+
+                    		<label for="campo4">8K-11K:</label>
+                    		<input type="number" id="campo4" name="campo4" min="0">
+
+                    		<label for="campo6">15K+:</label>
+                    		<input type="number" id="campo6" name="campo6" min="0">
+                	</div>
+           	   </div>
+
+
+                    <button type="button" id="calculate-button">Calcular</button>
+                </form>
+            </div>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
