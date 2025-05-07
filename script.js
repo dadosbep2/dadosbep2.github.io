@@ -76,8 +76,8 @@ function calcularRV() {
 
     // Tabela de fatores de multiplicação para cada percentual
     const tabelaFatores = {
-        0: 0, 50: 0, 60: 0, 70: 0.3, 80: 0.4, 90: 0.5, 100: 1, 101: 1.01, 102: 1.02, 103: 1.03, 104: 1.04, 105: 1.05, 106: 1.06, 107: 1.07, 
-        108: 1.08, 109: 1.09, 110: 1.10, 111: 1.11, 112: 1.12, 113: 1.13, 114: 1.14, 115: 1.15, 116: 1.16, 117: 1.17, 118: 1.18, 119: 1.19, 
+        0: 0, 50: 0, 60: 0.3, 70: 0.3, 80: 1, 90: 1.1, 100: 1.2, 101: 1.2, 102: 1.2, 103: 1.2, 104: 1.2, 105: 1.2, 106: 1.2, 107: 1.2, 
+        108: 1.2, 109: 1.2, 110: 1.2, 111: 1.21, 112: 1.22, 113: 1.23, 114: 1.24, 115: 1.25, 116: 1.26, 117: 1.27, 118: 1.28, 119: 1.29, 
  	120: 1.30, 121: 1.31, 122: 1.32, 123: 1.33, 124: 1.34, 125: 1.35, 126: 1.36, 127: 1.37, 128: 1.38, 129: 1.39, 130: 1.40, 131: 1.41, 
 	132: 1.42, 133: 1.43, 134: 1.44, 135: 1.45, 136: 1.46, 137: 1.47, 138: 1.48, 139: 1.49, 140: 1.50, 141: 1.51, 142: 1.52, 143: 1.53, 
 	144: 1.54, 145: 1.55, 146: 1.56, 147: 1.57, 148: 1.58, 149: 1.59, 150: 1.70, 151: 1.71, 152: 1.72, 153: 1.73, 154: 1.74, 155: 1.75,
@@ -108,8 +108,8 @@ function calcularRV() {
     // Cálculo do Valor Premiação
     let valorPremiacao = bonusT3Smart + bonusCNPJ + punicao + bonusMigracao;
 
-    // Verificar se migração é menor que 35%
-    if (migracao < 35 || tpv < 5000 || clientes < 50 || prod < 0.3) {
+    // Verificar se migração é menor que 30%
+    if (migracao < 30 || tpv < 5000 || clientes < 40 || prod < 0.3) {
 	valorPremiacao = 0;
     } 
     
@@ -127,12 +127,12 @@ function calcularRV() {
 
     // Determinação das faixas do TPV Médio
     let percentualTPV = 0;
-    if (tpvMedio < 4000) {
+    if (tpvMedio < 5000) {
 	percentualTPV = 0;
-    } else if (tpvMedio >= 4000 && tpvMedio < 6000) {
-        percentualTPV = 0.00025;
-    } else if (tpvMedio >= 6000 && tpvMedio < 11000) {
-        percentualTPV = 0.0005;
+    } else if (tpvMedio >= 5000 && tpvMedio < 6500) {
+        percentualTPV = 0.00030;
+    } else if (tpvMedio >= 6500 && tpvMedio < 11000) {
+        percentualTPV = 0.00055;
     } else if (tpvMedio >= 11000 && tpvMedio < 15000) {
         percentualTPV = 0.00075;
     } else if (tpvMedio >= 15000) {
