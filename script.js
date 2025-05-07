@@ -11,7 +11,7 @@ function calcularRV() {
     let valorComissao = 0;
 
     // Definição do valor comissão 
-    if (clientes < 50 || prod < 0.3 || tpv < 5000) {
+    if (clientes < 40 || prod < 0.3 || tpv < 5000) {
         valorComissao = 0;
     } else if (tpv >= 5000 && tpv < 6500) {
         if (prod >= 0.3) valorComissao = 100;
