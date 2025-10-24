@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de RV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Calculadora de RV</h2>
+	<h2>Comissão</h2>
+
+        <label for="prod">Prod:</label>
+        <input type="number" id="prod" min="0" max="100" step="0.01">
+
+	<h2>Premiação</h2>
+        <label for="10K">Faixa 10K - 15K:</label>
+        <input type="number" id="10k" min="0">
+
+        <label for="15K">Faixa 15K - 20K:</label>
+        <input type="number" id="15k" min="0">
+
+        <label for="20K">Faixa 20K - 25K:</label>
+        <input type="number" id="20k" min="0">
+
+        <label for="25K">Faixa 25K+:</label>
+        <input type="number" id="25k" min="0">
+
+	<h2>Premiação Bônus</h2>
+	<label for="prodBonus">Todos os consultores atingiram 0,3 de prod?</label>
+	<div class="button-group" id="prodBonusGroup">
+    		<button type="button" class="bonus-btn" data-value="N" onclick="selecionarBonus(this)">Não</button>
+    		<button type="button" class="bonus-btn" data-value="S" onclick="selecionarBonus(this)">Sim</button>
+	</div>
+	<input type="hidden" id="prodBonus" value="N">
+
+        <label for="tpvmediop">TPV M1 Médio polo:</label>
+        <input type="number" id="tpvmediop" min="0">
+
+	<h2>Trimestral</h2>
+        <label for="tpv-medio">TPV Médio no trimestre:</label>
+        <input type="number" id="tpv-medio" name="tpv-medio" min="0" step="0.01">
+
+        <label for="qtdvendas">Quantidade de vendas no trimestre:</label>
+        <input type="number" id="qtdvendas" name="qtdvendas" min="0">
+
+        <label for="metaconjunta">% Meta conjunta:</label>
+        <input type="number" id="metaconjunta" name="metaconjunta" min="0">
+
+        <button onclick="calcularRV()">Calcular</button>
+
+        <p id="resultado"></p>
+    </div>
+     		
+    <script src="script.js"></script>
+</body>
+</html>
