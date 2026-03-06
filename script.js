@@ -19,7 +19,7 @@ function calcularRV() {
     } else if (prod >= 0.35 && prod < 0.5) {
         valorComissao = 750;
     } else 
-	valorComissao = 1000;
+		valorComissao = 1000;
 
 
     // Definição do valor base para premiação
@@ -38,16 +38,16 @@ function calcularRV() {
 	} else if (desempenho >= 150) {
 		ds = 0.5;
 	}
-	valorBase *= (1+ds);
+	valorBase = valorBase * (1+ds);
 	
     // Definição do valor da premiação bônus
     let valorBonus = 0;
     if (prodb == "S" && tpvmediop >= 15000) {
-	valorBonus = 500;
+		valorBonus = 500;
     } else if (prodb == "S" && tpvmediop >= 10000) {
-	valorBonus = 200;
+		valorBonus = 200;
     } else {
-	valorBonus = 0;
+		valorBonus = 0;
     } 
 
     // Definição valor trimestral
@@ -100,6 +100,7 @@ function selecionarBonus(botao) {
     // Atualiza o input hidden para o cálculo
     document.getElementById("prodBonus").value = botao.dataset.value;
 }
+
 
 
 
